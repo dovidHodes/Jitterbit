@@ -1,0 +1,341 @@
+{
+  "totalPallets": 12,
+  "pallets": [
+    {
+      "palletNumber": 1,
+      "palletId": 1281,
+      "sscc": "00108425590000012816",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-GY",
+          "displayName": "Handled Potty Chair (Gray)",
+          "qty": 84,
+          "cartons": 14,
+          "vpn": "PT-HPC-1-GY",
+          "ediUom": "EA",
+          "poLineNumber": "6"
+        },
+        {
+          "itemName": "PT-LDR-3-AQ",
+          "displayName": "Ready Step Go! Potty Ladder (Aqua)",
+          "qty": 4,
+          "cartons": 1,
+          "vpn": "PT-LDR-3-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "14"
+        }
+      ]
+    },
+    {
+      "palletNumber": 2,
+      "palletId": 1282,
+      "sscc": "00108425590000012823",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-GY",
+          "displayName": "Handled Potty Chair (Gray)",
+          "qty": 84,
+          "cartons": 14,
+          "vpn": "PT-HPC-1-GY",
+          "ediUom": "EA",
+          "poLineNumber": "6"
+        },
+        {
+          "itemName": "PT-LDR-3-AQ",
+          "displayName": "Ready Step Go! Potty Ladder (Aqua)",
+          "qty": 4,
+          "cartons": 1,
+          "vpn": "PT-LDR-3-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "14"
+        }
+      ]
+    },
+    {
+      "palletNumber": 3,
+      "palletId": 1283,
+      "sscc": "00108425590000012830",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-GY",
+          "displayName": "Handled Potty Chair (Gray)",
+          "qty": 72,
+          "cartons": 12,
+          "vpn": "PT-HPC-1-GY",
+          "ediUom": "EA",
+          "poLineNumber": "6"
+        },
+        {
+          "itemName": "PT-LDR-3-AQ",
+          "displayName": "Ready Step Go! Potty Ladder (Aqua)",
+          "qty": 16,
+          "cartons": 4,
+          "vpn": "PT-LDR-3-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "14"
+        }
+      ]
+    },
+    {
+      "palletNumber": 4,
+      "palletId": 1284,
+      "sscc": "00108425590000012847",
+      "items": [
+        {
+          "itemName": "PT-LDR-3-AQ",
+          "displayName": "Ready Step Go! Potty Ladder (Aqua)",
+          "qty": 80,
+          "cartons": 20,
+          "vpn": "PT-LDR-3-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "14"
+        }
+      ]
+    },
+    {
+      "palletNumber": 5,
+      "palletId": 1285,
+      "sscc": "00108425590000012854",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-AQ",
+          "displayName": "Handled Potty Chair (Aqua)",
+          "qty": 24,
+          "cartons": 4,
+          "vpn": "PT-HPC-1-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "4"
+        },
+        {
+          "itemName": "PT-2IN1-1-BU",
+          "displayName": "2-in-1 Potty (Blue)",
+          "qty": 6,
+          "cartons": 1,
+          "vpn": "PT-2IN1-1-BU",
+          "ediUom": "EA",
+          "poLineNumber": "23"
+        },
+        {
+          "itemName": "PT-LDR-3-AQ",
+          "displayName": "Ready Step Go! Potty Ladder (Aqua)",
+          "qty": 56,
+          "cartons": 14,
+          "vpn": "PT-LDR-3-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "14"
+        }
+      ]
+    },
+    {
+      "palletNumber": 6,
+      "palletId": 1286,
+      "sscc": "00108425590000012861",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-AQ",
+          "displayName": "Handled Potty Chair (Aqua)",
+          "qty": 84,
+          "cartons": 14,
+          "vpn": "PT-HPC-1-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "4"
+        },
+        {
+          "itemName": "PT-FPS-2-SG",
+          "displayName": "Folding Potty Seat (Sage) 2.0",
+          "qty": 36,
+          "cartons": 1,
+          "vpn": "PT-FPS-2-SG",
+          "ediUom": "EA",
+          "poLineNumber": "22"
+        }
+      ]
+    },
+    {
+      "palletNumber": 7,
+      "palletId": 1287,
+      "sscc": "00108425590000012878",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-AQ",
+          "displayName": "Handled Potty Chair (Aqua)",
+          "qty": 60,
+          "cartons": 10,
+          "vpn": "PT-HPC-1-AQ",
+          "ediUom": "EA",
+          "poLineNumber": "4"
+        },
+        {
+          "itemName": "PT-HPS-1-PK",
+          "displayName": "Handled Potty Seat (Pink)",
+          "qty": 8,
+          "cartons": 1,
+          "vpn": "PT-HPS-1-PK",
+          "ediUom": "EA",
+          "poLineNumber": "9"
+        },
+        {
+          "itemName": "PT-FPS-2-SG",
+          "displayName": "Folding Potty Seat (Sage) 2.0",
+          "qty": 252,
+          "cartons": 7,
+          "vpn": "PT-FPS-2-SG",
+          "ediUom": "EA",
+          "poLineNumber": "22"
+        }
+      ]
+    },
+    {
+      "palletNumber": 8,
+      "palletId": 1288,
+      "sscc": "00108425590000012885",
+      "items": [
+        {
+          "itemName": "PT-FPS-2-SG",
+          "displayName": "Folding Potty Seat (Sage) 2.0",
+          "qty": 756,
+          "cartons": 21,
+          "vpn": "PT-FPS-2-SG",
+          "ediUom": "EA",
+          "poLineNumber": "22"
+        },
+        {
+          "itemName": "PT-LDR-3-SG",
+          "displayName": "Ready Step Go! Potty Ladder (Sage)",
+          "qty": 8,
+          "cartons": 2,
+          "vpn": "PT-LDR-3-SG",
+          "ediUom": "EA",
+          "poLineNumber": "19"
+        }
+      ]
+    },
+    {
+      "palletNumber": 9,
+      "palletId": 1289,
+      "sscc": "00108425590000012892",
+      "items": [
+        {
+          "itemName": "PT-LDR-3-SG",
+          "displayName": "Ready Step Go! Potty Ladder (Sage)",
+          "qty": 80,
+          "cartons": 20,
+          "vpn": "PT-LDR-3-SG",
+          "ediUom": "EA",
+          "poLineNumber": "19"
+        }
+      ]
+    },
+    {
+      "palletNumber": 10,
+      "palletId": 1290,
+      "sscc": "00108425590000012908",
+      "items": [
+        {
+          "itemName": "PT-RFEEL-1-SG",
+          "displayName": "Real Feel PLUS 2-in-1 Potty (Sage)",
+          "qty": 18,
+          "cartons": 3,
+          "vpn": "PT-RFEEL-1-SG",
+          "ediUom": "EA",
+          "poLineNumber": "16"
+        },
+        {
+          "itemName": "PT-HPS-1-PK",
+          "displayName": "Handled Potty Seat (Pink)",
+          "qty": 8,
+          "cartons": 1,
+          "vpn": "PT-HPS-1-PK",
+          "ediUom": "EA",
+          "poLineNumber": "9"
+        },
+        {
+          "itemName": "PT-LDR-3-PK",
+          "displayName": "Ready Step Go! Potty Ladder (Pink)",
+          "qty": 60,
+          "cartons": 15,
+          "vpn": "PT-LDR-3-PK",
+          "ediUom": "EA",
+          "poLineNumber": "20"
+        }
+      ]
+    },
+    {
+      "palletNumber": 11,
+      "palletId": 1291,
+      "sscc": "00108425590000012915",
+      "items": [
+        {
+          "itemName": "PT-RFEEL-1-SG",
+          "displayName": "Real Feel PLUS 2-in-1 Potty (Sage)",
+          "qty": 30,
+          "cartons": 5,
+          "vpn": "PT-RFEEL-1-SG",
+          "ediUom": "EA",
+          "poLineNumber": "16"
+        },
+        {
+          "itemName": "PT-HPS-1-PK",
+          "displayName": "Handled Potty Seat (Pink)",
+          "qty": 96,
+          "cartons": 12,
+          "vpn": "PT-HPS-1-PK",
+          "ediUom": "EA",
+          "poLineNumber": "9"
+        },
+        {
+          "itemName": "PT-HPS-1-SG",
+          "displayName": "Handled Potty Seat (Sage)",
+          "qty": 64,
+          "cartons": 8,
+          "vpn": "PT-HPS-1-SG",
+          "ediUom": "EA",
+          "poLineNumber": "15"
+        }
+      ]
+    },
+    {
+      "palletNumber": 12,
+      "palletId": 1292,
+      "sscc": "00108425590000012922",
+      "items": [
+        {
+          "itemName": "PT-HPC-1-PK",
+          "displayName": "Handled Potty Chair (Pink)",
+          "qty": 24,
+          "cartons": 4,
+          "vpn": "PT-HPC-1-PK",
+          "ediUom": "EA",
+          "poLineNumber": "5"
+        },
+        {
+          "itemName": "DP-CPAD-ACCS-1",
+          "displayName": "Replacement Covers for CPAD-1 (2 pack, Wave, Off-White, Gray)",
+          "qty": 16,
+          "cartons": 1,
+          "vpn": "DP-CPAD-ACCS-1",
+          "ediUom": "EA",
+          "poLineNumber": "12"
+        },
+        {
+          "itemName": "PT-HPS-1-SG",
+          "displayName": "Handled Potty Seat (Sage)",
+          "qty": 16,
+          "cartons": 2,
+          "vpn": "PT-HPS-1-SG",
+          "ediUom": "EA",
+          "poLineNumber": "15"
+        },
+        {
+          "itemName": "PT-FPS-2-WT",
+          "displayName": "Folding Potty Seat (White) 2.0",
+          "qty": 288,
+          "cartons": 8,
+          "vpn": "PT-FPS-2-WT",
+          "ediUom": "EA",
+          "poLineNumber": "21"
+        }
+      ]
+    }
+  ]
+}

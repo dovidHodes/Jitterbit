@@ -1,0 +1,444 @@
+{
+  "mappings": [
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA14_Ack_Requested$",
+      "script": "<trans>\n\"0\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA14_Ack_Requested"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA15_Usage$",
+      "script": "<trans>\n\"P\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA15_Usage"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA16_Component_Separator$",
+      "script": "<trans>\n\">\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA16_Component_Separator"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.GS07_Agency_Code$",
+      "script": "<trans>\n\"X\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/GS07_Agency_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.ST01_Transaction_Set_Identifier_Code$",
+      "script": "<trans>\n\"856\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/ST01_Transaction_Set_Identifier_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN01_Transaction_Set_Purpose_Code$",
+      "script": "<trans>\n\"00\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN01_Transaction_Set_Purpose_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN03_Date$",
+      "script": "<trans>\nFormatDate(ConvertTimeZone(Now(), \"UTC\", \"America/New_York\", false, false),\"yyyymmdd\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN03_Date"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n\"1\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.HL03_Hierarchical_Level_Code$",
+      "script": "<trans>\n\"S\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/HL03_Hierarchical_Level_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD108_Unit_Or_Basis_For_Measurement_Code$",
+      "script": "<trans>\n\"LB\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD108_Unit_Or_Basis_For_Measurement_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD5.TD502_Identification_Code_Qualifier$",
+      "script": "<trans>\n\"2\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD5/TD502_Identification_Code_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN05_Hierarchical_Structure_Code$",
+      "script": "<trans>\n\"0001\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN05_Hierarchical_Structure_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL02_Hierarchical_Parent_Id_Number$",
+      "script": "<trans>\n//hi\n\"1\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL02_Hierarchical_Parent_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL03_Hierarchical_Level_Code$",
+      "script": "<trans>\n\"P\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL03_Hierarchical_Level_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n\"2\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN01_Marks_And_Numbers_Qualifier$",
+      "script": "<trans>\n\"GM\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN01_Marks_And_Numbers_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"BM\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM.DTM01_Date_Time_Qualifier$",
+      "script": "<trans>\n\"011\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM/DTM01_Date_Time_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.FOB.FOB01_Shipment_Method_Of_Payment$",
+      "script": "<trans>\n\"CC\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/FOB/FOB01_Shipment_Method_Of_Payment"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN102_Number_Of_Units_Shipped$",
+      "script": "<trans>\n$quantity\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN102_Number_Of_Units_Shipped"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN103_Unit_Or_Basis_For_Measurement_Code$",
+      "script": "<trans>\narrayOfInfo = $itemDetailDict[$itemID];\narrayOfInfo[4]\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN103_Unit_Or_Basis_For_Measurement_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL02_Hierarchical_Parent_Id_Number$",
+      "script": "<trans>\n$packageIterator++;\n\"2\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL02_Hierarchical_Parent_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL03_Hierarchical_Level_Code$",
+      "script": "<trans>\n\"I\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL03_Hierarchical_Level_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL02_Hierarchical_Parent_Id_Number$",
+      "script": "<trans>\n$HLPIterator\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL02_Hierarchical_Parent_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL03_Hierarchical_Level_Code$",
+      "script": "<trans>\n$packageIterator = 1;\n$packagesRetreivedFromPackagesTab = 0;\n\"O\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL03_Hierarchical_Level_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.",
+      "script": "<trans>\nrun = false;\n$lineDataIsPresent = true;\nif($recordIterator == searchResponse$searchResult$recordList$record.ItemFulfillment$recordNumber$recordNumber$, run = true);\nrun\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.CTT?1.",
+      "script": "<trans>\n$isTest\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/CTT#1"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.CTT?1.CTT01_Number_Of_Line_Items$",
+      "script": "<trans>\n$jitterbitErrorMessage\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/CTT#1/CTT01_Number_Of_Line_Items"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA05_ID_Qualifier$",
+      "script": "<trans>\n$senderQualfier\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA05_ID_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA06_Sender_ID$",
+      "script": "<trans>\n$senderID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA06_Sender_ID"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA07_ID_Qualifier$",
+      "script": "<trans>\n$recieverQualifer\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA07_ID_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA08_Receiver_ID$",
+      "script": "<trans>\n$recieverID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA08_Receiver_ID"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA11_Standards_Id$",
+      "script": "<trans>\n\n$standardsID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA11_Standards_Id"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA12_Control_Version$",
+      "script": "<trans>\n$controlVersion\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA12_Control_Version"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.GS01_Functional_Identifier_Code$",
+      "script": "<trans>\n$twoDigitLetterCode\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/GS01_Functional_Identifier_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.GS02_Sender_Code$",
+      "script": "<trans>\n$senderID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/GS02_Sender_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.GS03_Receiver_Code$",
+      "script": "<trans>\n$recieverID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/GS03_Receiver_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.GS08_Version_Control$",
+      "script": "<trans>\n$controlVersion + \"0\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/GS08_Version_Control"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.PRF.PRF01_Purchase_Order_Number$",
+      "script": "<trans>\n$poNumber = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Related_PO__$value$;\n$poNumber\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/PRF/PRF01_Purchase_Order_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD107_Weight$",
+      "script": "<trans>  \n$numberOfPackages = length($arrayOfPackageStrings);\ni = 0;\ntotalWeight = 0.0;\n\nwhile(i < $numberOfPackages,\n      currentPackageArrayOfDetails = split($arrayOfPackageStrings[i], \",\");\n      packageWeight = double(currentPackageArrayOfDetails[4]);\n\t\t\ttotalWeight += packageWeight;\n      i++;\n      );\n      \n      \ntotalWeightWithTwoDecimalPlaces = Round(totalWeight, 2);\n      \n      \ntotalWeightWithTwoDecimalPlaces\n\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD107_Weight"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD106_Weight_Qualifier$",
+      "script": "<trans>\npoop = 10;\n\"G\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD106_Weight_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM.DTM02_Date$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 1, shippedDate) , \"yyyymmdd\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM/DTM02_Date"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.CTT.CTT01_Number_Of_Line_Items$",
+      "script": "<trans>\n$packagesAreOK = false;\n$labelIDAndTrackingMatch = true;\n\n$labelIDAndTrackingMatch = ($labelID == $trackingNumber);\nWriteToOperationLog(\"LABEL ID: \" + $labelID + \" tracking NUMBER: \" + $trackingNumber);\nWriteToOperationLog(\"LABEL ID EQUALS TRACXKINGF BOOLEAN: \" + $labelIDAndTrackingMatch);\n\n//WriteToOperationLog(\"Packages retrived from packages tab: \" + $packagesRetreivedFromPackagesTab);\nif($packagesRetreivedFromPackagesTab == $numberOfPackages && $packagesRetreivedFromPackagesTab > 0,\n    $packagesAreOK = true\n);\nif(!$packagesAreOK ,     $isTest = true;  $jitterbitErrorMessage += \"Amount of SPS EDI packages does not match amount of regular packages\" + \", \");\nWriteToOperationLog(\"PACKAGES FROM PACKAGE TAB: \" + $packagesRetreivedFromPackagesTab);\nWriteToOperationLog(\"SPS PACKAGES: \" + $numberOfPackages);\n\n$HLPIterator + 1\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/CTT/CTT01_Number_Of_Line_Items"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN02_Shipment_Identification$",
+      "script": "<trans>\nright(searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$, 9)\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN02_Shipment_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN04_Time$",
+      "script": "<trans>\nFormatDate(ConvertTimeZone(Now(), \"UTC\", \"America/New_York\", false, false),\"HHMM\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN04_Time"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN02_Marks_And_Numbers$",
+      "script": "<trans>\n\"00\" + $labelID\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN02_Marks_And_Numbers"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA01_Info_Qualifier$",
+      "script": "<trans>\n$isTest = false;\n$jitterbitErrorMessage = \"\";\n//WriteToOperationLog(\"DONALD TRUMP WILL BE THE 47th PRESIDENT OF THE USA!!\");\n$IF_ID = searchResponse$searchResult$recordList$record.ItemFulfillment$internalId;\nifNumber = searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$;\nwritecache(ifNumber ,$IF_ID, 2592000, \"env\");\nWriteToOperationLog(\"IF NUMBER: \" + ifNumber);\nWriteToOperationLog(\"  \");\nallPackagesString = readcache($IF_ID, 2592000, \"env\");\nWriteToOperationLog(\"Package string for this IF: \" + allPackagesString);\n$arrayOfPackageStrings = split(allPackagesString, \"+\");\nspsPAckageCount = Length($arrayOfPackageStrings);\nWriteToOperationLog(\"AMOUNT OF PACKAGES BASED ON PACKAGES STRING: \" + spsPAckageCount);\nWriteToOperationLog(\" \");\nWriteToOperationLog(\"THE BREAKDOWN: \" );\n\ni = 0;\nwhile(i < spsPAckageCount,\n\t\t\tWriteToOperationLog((i + 1) + \")\");\n      deetsArray = split($arrayOfPackageStrings[i], \",\");\n      WriteToOperationLog(\"Label ID: \" + deetsArray[0]);\n      WriteToOperationLog(\"-\");\n      i++;\n      );\n      \n\n$itemDetailDict = dict();\n\n\"00\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA01_Info_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD101_Packaging_Code$",
+      "script": "<trans>\n\"CTN\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD101_Packaging_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N101_Entity_Identifier_Code$",
+      "script": "<trans>\n\"SF\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N101_Entity_Identifier_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N104_Identification_Code$",
+      "script": "<trans>\nsearchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Ship_To_Code$value$\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N104_Identification_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N101_Entity_Identifier_Code$",
+      "script": "<trans>\n\"ST\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N101_Entity_Identifier_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN101_Assigned_Identification$",
+      "script": "<trans>\n$PO_LineItemNUmber\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN101_Assigned_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n$HLPIterator + 1\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n$PO_LineItemNUmber = 0;\n//get it to loop on the package level:\n$trackingNumFromIFItself = searchResponse$searchResult$recordList$record.ItemFulfillment$packageList$package.packageTrackingNumber$;\n$packagesRetreivedFromPackagesTab++;\nWriteToOperationLog(\"  \");\nWriteToOperationLog(\"Package \" + $packagesRetreivedFromPackagesTab + \":\");\n$packageDetailArray = split($arrayOfPackageStrings[$packageIterator - 1], \",\");\n\n// declare package details\n$labelID = $packageDetailArray[0];\n$trackingNumber = $packageDetailArray[1];\n$itemID = $packageDetailArray[2];\n//if($itemID  == \"552\", $itemID = \"553\");\n$quantity = $packageDetailArray[3];\n$weight = double($packageDetailArray[4]);\n\n$HLPIterator = ($packageIterator * 2) + 1;\n$HLPIterator\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.REF?4.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\nitemInternalID = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.item$internalId;\nUPC = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$UPC$value$;\nBPN = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$BPN$value$;\nVPN = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$VPN$value$;\nGTIN = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$GTIN$value$;\nEDIUOM = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$EDI_UOM$value$;\nOuterPack = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$Outer_Pack$value$;\nInnerPack = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$Inner_Pack$value$;\npoLineNumber = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.customFieldList$PO_Line_$value$;\nqtyOrdered = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.quantity$;\n\nitemInfoArray = {UPC, BPN, VPN, GTIN, EDIUOM, OuterPack, InnerPack, poLineNumber, qtyOrdered };\nAddToDict($itemDetailDict,itemInternalID, itemInfoArray);\n\"\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/REF#4/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN01_Assigned_Identification$",
+      "script": "<trans>\narrayOfInfo = $itemDetailDict[$itemID];\n$PO_LineItemNUmber = arrayOfInfo[7];\n$PO_LineItemNUmber\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN01_Assigned_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD5.TD504_Transportation_Method_Type_Code$",
+      "script": "<trans>\n//$hasSCAC = true;\n//code = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Carrier_Transportation_Method_Code$value$;\n//if(isnull(code), $hasSCAC = false; code = \"M\");\n//code\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD5/TD504_Transportation_Method_Type_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?2.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"CN\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#2/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD102_Lading_Quantity$",
+      "script": "<trans>\n$numberOfPackages = length($arrayOfPackageStrings);\n$numberOfPackages\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD102_Lading_Quantity"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?2.REF02_Reference_Identification$",
+      "script": "<trans>\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Carrier_PRO_Number$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing  carrier PRO\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#2/REF02_Reference_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?3.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"BX\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#3/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?3.REF02_Reference_Identification$",
+      "script": "<trans>\n//REALLY IN  AMAZON ARN NUMBER CFIELD IN NS BUT MAPPIED INTO THIS FIELD ON THE IF SCHEMA DECLARATION\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$In8_Amazon_Pro_Number$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing Amazon ARN numbr\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#3/REF02_Reference_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM.DTM03_Time$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 1, shippedDate) , \"HHMM\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM/DTM03_Time"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM01_Date_Time_Qualifier$",
+      "script": "<trans>\n\"017\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM01_Date_Time_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM02_Date$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 2, shippedDate) , \"yyyymmdd\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM02_Date"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM03_Time$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 2, shippedDate) , \"HHMM\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM03_Time"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N103_Identification_Code_Qualifier$",
+      "script": "<trans>\n\"92\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N103_Identification_Code_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N104_Identification_Code$",
+      "script": "<trans>\n//REALLY MAPPED FORM NS FIELD AMAZON WAREHOUSE LOCATION NUMBER IN JB ROUTING TAB BUT.. YK \nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$In8_Amazon_Id$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing Amazon warehouse code    \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N104_Identification_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N4.N403_Postal_Code$",
+      "script": "<trans>\nBOL = $locationToZip[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from location zipcode.   \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N4/N403_Postal_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N4.N401_City_Name$",
+      "script": "<trans>\nBOL = $locationToCity[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from location city.    \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N4/N401_City_Name"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N102_Name$",
+      "script": "<trans>\n$location = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Ship_From_Address_Location_Number$value$;\nBOL = $locationToName[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from location name\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N102_Name"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N4.N402_State_Or_Province_Code$",
+      "script": "<trans>\nBOL = $locationToState[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from state.    \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N4/N402_State_Or_Province_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N4.N404_Country_Code$",
+      "script": "<trans>\n\"US\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N4/N404_Country_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N3.N301_Address_Information$",
+      "script": "<trans>\nBOL = $locationToAddress1[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from address 1    \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N3/N301_Address_Information"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N3.N302_Address_Information$",
+      "script": "<trans>\nBOL = $locationToAddress2[$location];\n//(isnull(BOL), $isTest = true; BOL = \"Missing ship from address 2.  \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N3/N302_Address_Information"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N103_Identification_Code_Qualifier$",
+      "script": "<trans>\nsearchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Ship_To_Code_Qualifier$value$;\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N103_Identification_Code_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N102_Name$",
+      "script": "<trans>\n\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$shippingAddress$addressee$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship to name\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N102_Name"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.PRF.PRF04_Date$",
+      "script": "<trans>\n//formatdate(DateAdd(\"dd\", 1,searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$PO_Date$value$ ), \"yyyymmdd\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/PRF/PRF04_Date"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN02_Product_Service_Id_Qualifier$",
+      "script": "<trans>\n\"VN\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN02_Product_Service_Id_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN03_Product_Service_Id$",
+      "script": "<trans>\narrayOfInfo = $itemDetailDict[$itemID];\n$VPN = arrayOfInfo[2];\nif(isnull($VPN), $lineDataIsPresent = false);\n$VPN\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN03_Product_Service_Id"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN07_Product_Service_Id$",
+      "script": "<trans>\n\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN07_Product_Service_Id"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?2.",
+      "script": "<trans>\n!$isSmallParcel\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#2"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"CN\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.",
+      "script": "<trans>\n$isSmallParcel\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.REF02_Reference_Identification$",
+      "script": "<trans>\n$trackingNumber\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF/REF02_Reference_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD5.TD503_Identification_Code$",
+      "script": "<trans>\nSCAC = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Standard_Carrier_Alpha_Code$value$;\nif(isnull(SCAC), $isTest = true; SCAC = \"Missing standard carrier alpha code (SCAC)\"; $jitterbitErrorMessage += SCAC + \", \");\n$isSmallParcel = false; //(SCAC == \"SMALLPARCELCODE\")\nSCAC\n\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD5/TD503_Identification_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA03_Security_Info_Qualifier$",
+      "script": "<trans>\n$senderQualfier = \"12\";\n$senderID = \"7184060142P\";\n$recieverQualifer = \"ZZ\";\n$recieverID = \"AMAZON\";\n$standardsID = \"|\";\n$controlVersion = \"00501\";\n$twoDigitLetterCode = \"SH\";\n\n\"00\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA03_Security_Info_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF.REF02_Reference_Identification$",
+      "script": "<trans>\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Related_PO__$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing bill of lading (PO number)\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF/REF02_Reference_Identification"
+    }
+  ]
+}

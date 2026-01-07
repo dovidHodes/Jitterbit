@@ -1,0 +1,229 @@
+{
+  "mappings": [
+    {
+      "targetNode": "upsertList$record.CustomTransaction$tranType$internalId",
+      "script": "<trans>\n\"102\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/tranType/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$currency$internalId",
+      "script": "<trans>\n\"1\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/currency/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$tranStatus$internalId",
+      "script": "<trans>\n\"A\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/tranStatus/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$subsidiary$internalId",
+      "script": "<trans>\n\"2\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/subsidiary/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField.SelectCustomFieldRef$value$typeId",
+      "script": "<trans>\n\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField/SelectCustomFieldRef/value/typeId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField.SelectCustomFieldRef$internalId",
+      "script": "<trans>\n3926\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField/SelectCustomFieldRef/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$tranDate$",
+      "script": "<trans>\nnow()\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/tranDate"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.account$internalId",
+      "script": "<trans>\n\"813\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/account/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.amount$",
+      "script": "<trans>\n0\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/amount"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField.DoubleCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custcol_sps_cx_qty_left_to_receive\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField/DoubleCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField.DoubleCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC04_Quantity_Left_To_Receive$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField/DoubleCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?1.SelectCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custcol_sps_cx_line_change_code_860\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#1/SelectCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?1.SelectCustomFieldRef$value$internalId",
+      "script": "<trans>\ncode = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC02_Change_Or_Response_Type_Code$;\n\nID = case( code == \"RZ\", 13,\n           true, \"-1\");\n           \n           ID\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#1/SelectCustomFieldRef/value/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?1.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_addressee\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#1/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?1.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N102_Name$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#1/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?2.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_address_1\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#2/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?2.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N3#1.N301_Address_Information$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#2/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?3.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_address_2\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#3/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?3.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N3#1.N302_Address_Information$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#3/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?4.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_city\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#4/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?4.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N4#1.N401_City_Name$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#4/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?5.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_state\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#5/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?5.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N4#1.N402_State_Or_Province_Code$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#5/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?6.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_postalcode\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#6/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?6.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N4#1.N403_Postal_Code$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#6/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?7.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_country\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#7/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?7.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N4#1.N404_Country_Code$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#7/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?8.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_st_addressname\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#8/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?8.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.N1#1.N102_Name$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#8/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?9.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_ponumber\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#9/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?9.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.BCH.BCH03_Purchase_Order_Number$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#9/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?10.DateCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_pochangedate\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#10/DateCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?10.DateCustomFieldRef$value$",
+      "script": "<trans>\nXMLDate = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.GS04_Date$;\nRunScript(\"<TAG>script:getDateObjectFromEDIDate</TAG>\", XMLDate) ;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#10/DateCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?11.DateCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_sps_cx_trandate\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#11/DateCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?11.DateCustomFieldRef$value$",
+      "script": "<trans>\nXMLDate = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.GS04_Date$;\nRunScript(\"<TAG>script:getDateObjectFromEDIDate</TAG>\", XMLDate) ;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#11/DateCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?12.SelectCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custbody_po_change_customer_id\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#12/SelectCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?2.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custcol_sps_cx_qtyuom\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#2/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?2.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC05_Composite_Unit_Of_Measure$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#2/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?3.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custcol_sps_cx_buyerpartnumber\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#3/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?3.StringCustomFieldRef$value$",
+      "script": "<trans>\nqualifier = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC08_Product_Service_ID_Qualifier$;\nif(qualifier == \"IN\", GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC09_Product_Service_ID$, \"\")\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#3/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?4.StringCustomFieldRef$scriptId",
+      "script": "<trans>\n\"custcol_sps_cx_linesequencenumber\"\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#4/StringCustomFieldRef/scriptId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$lineList$customTransactionLine.customFieldList$customField?4.StringCustomFieldRef$value$",
+      "script": "<trans>\nGetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.POC.POC01_Assigned_Identification$;\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/lineList/customTransactionLine/customFieldList/customField#4/StringCustomFieldRef/value"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$externalId",
+      "script": "<trans>\nEDIdate = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.BCH.BCH06_Date$;\npoNumber = GetDocumentsResponse$Documents$DocInfo.X12Document$ISA.GS.ST.BCH.BCH03_Purchase_Order_Number$;\npoNumber + EDIdate + FormatDate(now(), \"HHMM\")\n\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/externalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField.SelectCustomFieldRef$value$internalId",
+      "script": "<trans>\n813530\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField/SelectCustomFieldRef/value/internalId"
+    },
+    {
+      "targetNode": "upsertList$record.CustomTransaction$customFieldList$customField?12.SelectCustomFieldRef$value$internalId",
+      "script": "<trans>\n$entity = 813530;\n$entity\n</trans>",
+      "targetPath": "upsertList/record/CustomTransaction/customFieldList/customField#12/SelectCustomFieldRef/value/internalId"
+    }
+  ]
+}
