@@ -1,8 +1,12 @@
 # JSON Functions in Jitterbit Design Studio
 
+> **Note:** For a quick reference summary of JSON functions commonly used in mappings, see the [JSON Functions section in Jitterbit-Mapping-Rules.md](./Jitterbit-Mapping-Rules.md#json-functions).
+
 ## Introduction
 
 JavaScript Object Notation (JSON) functions allow for the manipulation of data in the JSON format. For more information on JSON, refer to IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format.
+
+This document provides detailed reference documentation for all JSON functions. For mapping best practices and common patterns, see [Jitterbit-Mapping-Rules.md](./Jitterbit-Mapping-Rules.md).
 
 ## GetJSONString
 

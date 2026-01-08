@@ -197,6 +197,170 @@ When creating a mapping with loops:
 
 ---
 
+## Case Statement Syntax
+
+### Rule: Case Uses Boolean Conditions, Not String Matching
+
+The Jitterbit `Case` function acts like a multi-branch IF/ELSE chain. Each condition must be a **boolean expression** that evaluates to true or false.
+
+**Basic Case Syntax:**
+```javascript
+Case(
+  <condition1>, <result1>,
+  <condition2>, <result2>,
+  ...,
+  <conditionN>, <resultN>
+)
+```
+
+**Key Points:**
+- Each condition is a boolean expression (e.g., `field == "value"`, `success == true`, `count > 0`)
+- The function returns the result paired with the **first** condition that evaluates to true
+- Use `true` as the final condition to create a default/fall-through case
+
+**✅ CORRECT - Using Boolean Conditions:**
+```javascript
+Case(
+    success == true,
+        // Handle success case
+        $pallet_array_object = JSONParser(pallet_array_JSON);
+        $totalPallets = $pallet_array_object["totalPallets"];
+    ,
+    validationObj["status"] == "INVALID_JSON",
+        // Handle invalid JSON
+        $isTest = true;
+        $jitterbitErrorMessage += "Invalid JSON, ";
+    ,
+    validationObj["status"] == "MISSING_DATA",
+        // Handle missing data
+        $isTest = true;
+        $jitterbitErrorMessage += "Missing data, ";
+    ,
+    true,
+        // Default case
+        $isTest = true;
+        $jitterbitErrorMessage += "Validation failed, ";
+);
+```
+
+**❌ WRONG - String Matching (Switch Statement Style):**
+```javascript
+// This is INCORRECT - Case doesn't work like a switch statement
+Case(status,
+    "VALID",
+        // This won't work correctly
+        $totalPallets = 10;
+    ,
+    "INVALID_JSON",
+        // This won't work correctly
+        $isTest = true;
+);
+```
+
+**Example with Multiple Conditions:**
+```javascript
+Case(
+    Field1 > 100, "High",
+    Field1 >= 50 && Field1 <= 100, "Medium",
+    Field1 > 0 && Field1 < 50, "Low",
+    true, "Unknown"  // default case
+)
+```
+
+**Assigning Case Result to a Variable:**
+You can assign the result of a Case statement directly to a variable:
+
+```javascript
+// ✅ CORRECT - Assign Case result to variable
+$result = Case(
+    condition1, "1",
+    condition2, "2",
+    true, "0"  // default
+);
+
+// Example: Set status code based on validation
+$statusCode = Case(
+    success == true, "VALID",
+    validationObj["status"] == "INVALID_JSON", "ERROR",
+    validationObj["status"] == "MISSING_DATA", "WARNING",
+    true, "UNKNOWN"
+);
+```
+
+**When to Use Case vs If:**
+- Use **If** for simple two-way logic: `If(condition, valueIfTrue, valueIfFalse)`
+- Use **Case** when you have three or more branches or need a clear "default" result
+- Use **Case** when you want to assign a value based on multiple conditions: `$variable = Case(...)`
+
+---
+
+## JSON Functions
+
+Jitterbit provides built-in functions for working with JSON data. These are commonly used in mappings when processing JSON from custom fields or API responses.
+
+### JSONParser
+Converts a JSON string into a dictionary object that can be accessed with bracket notation.
+
+**Syntax:**
+```javascript
+dictionary JSONParser(string json_string)
+```
+
+**Example:**
+```javascript
+// Parse JSON string to object
+$pallet_array_object = JSONParser(pallet_array_JSON);
+
+// Access nested data
+$totalPallets = $pallet_array_object["totalPallets"];
+$currentPallet = $pallet_array_object["pallets"][$palletIterator];
+$sscc = $currentPallet["sscc"];
+```
+
+**Version Requirements:** Design Studio 11.29+, Agent 11.29+
+
+### GetJSONString
+Retrieves data from a JSON object string using a path expression.
+
+**Syntax:**
+```javascript
+string GetJSONString(string json_string, string path)
+```
+
+**Example:**
+```javascript
+json_string = '{ "company": [{ "name": "Jitterbit", "product": [{ "type": "iPaaS", "name": "Jitterbit iPaaS" }] }] }';
+
+GetJSONString(json_string, "/company/[0]/product/[0]/name");
+// Returns "Jitterbit iPaaS"
+```
+
+**Version Requirements:** Design Studio 11.28+, Agent 11.28+
+
+### JSONStringify
+Converts a dictionary object into a JSON string.
+
+**Syntax:**
+```javascript
+string JSONStringify(dictionary json_object)
+```
+
+**Example:**
+```javascript
+json_object = Dict();
+json_object["name"] = "Jitterbit";
+json_object["type"] = "iPaaS";
+
+JSONStringify(json_object);
+// Returns '{"name":"Jitterbit","type":"iPaaS"}'
+```
+
+**Version Requirements:** Design Studio 11.30+, Agent 11.30+ (11.45+ for full character support)
+
+**Note:** For detailed JSON function documentation, see `JSON-Functions.md`.
+
+---
+
 ## Notes
 
 - Variables without `$` are local to the target node script
@@ -204,4 +368,6 @@ When creating a mapping with loops:
 - Source nodes are required for Jitterbit to know how many times to loop
 - JSON parsing creates dictionary objects that can be accessed with bracket notation
 - Always use `$` prefix when accessing JSON data that will be used in multiple nodes
+- Case statements use boolean conditions, not string matching like switch statements
+- Case statements can be assigned directly to variables: `$variable = Case(...)`
 

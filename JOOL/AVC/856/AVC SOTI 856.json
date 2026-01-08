@@ -1,11 +1,6 @@
 {
   "mappings": [
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.",
-      "script": "<trans>\n// Only run pallet-level node when palletIterator < totalPallets\n$palletIterator < $totalPallets\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1"
-    },
-    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA14_Ack_Requested$",
       "script": "<trans>\n\"0\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA14_Ack_Requested"
@@ -66,29 +61,34 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN05_Hierarchical_Structure_Code"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL02_Hierarchical_Parent_Id_Number$",
-      "script": "<trans>\n//hi\n\"1\"\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL02_Hierarchical_Parent_Id_Number"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL03_Hierarchical_Level_Code$",
-      "script": "<trans>\n\"P\"\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL03_Hierarchical_Level_Code"
-    },
-    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL01_Hierarchical_Id_Number$",
-      "script": "<trans>\n$palletIterator = 0;\n\"2\"\n</trans>",
+      "script": "<trans>\n\"2\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL01_Hierarchical_Id_Number"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN01_Marks_And_Numbers_Qualifier$",
-      "script": "<trans>\n\"GM\"\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN01_Marks_And_Numbers_Qualifier"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF.REF01_Reference_Identification_Qualifier$",
       "script": "<trans>\n\"BM\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?2.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"CN\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#2/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?2.REF02_Reference_Identification$",
+      "script": "<trans>\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Carrier_PRO_Number$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing  carrier PRO\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#2/REF02_Reference_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?3.REF01_Reference_Identification_Qualifier$",
+      "script": "<trans>\n\"BX\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#3/REF01_Reference_Identification_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.REF?3.REF02_Reference_Identification$",
+      "script": "<trans>\n//REALLY IN  AMAZON ARN NUMBER CFIELD IN NS BUT MAPPIED INTO THIS FIELD ON THE IF SCHEMA DECLARATION\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$In8_Amazon_Pro_Number$value$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing Amazon ARN numbr\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/REF#3/REF02_Reference_Identification"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM.DTM01_Date_Time_Qualifier$",
@@ -101,29 +101,14 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/FOB/FOB01_Shipment_Method_Of_Payment"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN102_Number_Of_Units_Shipped$",
-      "script": "<trans>\n// Get quantity from current item in current pallet\n// Use $currentPallet already declared in pallet header\n$currentItem = $currentPallet[\"items\"][$itemIterator];\n$currentItem[\"qty\"]\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN102_Number_Of_Units_Shipped"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN103_Unit_Or_Basis_For_Measurement_Code$",
-      "script": "<trans>\n// Get EDI UOM from current item in current pallet\n// Use $currentPallet already declared in pallet header\n$currentItem = $currentPallet[\"items\"][$itemIterator];\n$currentItem[\"ediUom\"]\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN103_Unit_Or_Basis_For_Measurement_Code"
-    },
-    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL02_Hierarchical_Parent_Id_Number$",
-      "script": "<trans>\n$palletIterator++;\n\"2\"\n</trans>",
+      "script": "<trans>\n// Pallet parent is always Order level (2)\n$palletIterator++;\n\"2\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL02_Hierarchical_Parent_Id_Number"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL03_Hierarchical_Level_Code$",
       "script": "<trans>\n\"I\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL03_Hierarchical_Level_Code"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL02_Hierarchical_Parent_Id_Number$",
-      "script": "<trans>\n// Increment item iterator for next item in pallet\n$itemIterator++;\n$HLPIterator\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL02_Hierarchical_Parent_Id_Number"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.CTT?1.",
@@ -192,7 +177,7 @@
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD107_Weight$",
-      "script": "<trans>\n// Calculate total weight from pallets (if weight data is available in JSON)\n// For now, return 0.0 as weight may not be in pallet JSON structure\n// TODO: Add weight calculation if weight is added to pallet JSON\n0.0\n</trans>",
+      "script": "<trans>\n// Map weight from Total_shipment_weight custom field\nweight = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Total_shipment_weight$value$;\nif(isnull(weight), weight = 0.0);\nRound(double(weight), 2)\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD107_Weight"
     },
     {
@@ -216,29 +201,14 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN04_Time"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN02_Marks_And_Numbers$",
-      "script": "<trans>\n// Use SSCC from current pallet JSON\n$currentPalletSSCC\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN02_Marks_And_Numbers"
-    },
-    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD1.TD101_Packaging_Code$",
-      "script": "<trans>\n\"CTN\"\n</trans>",
+      "script": "<trans>\n\"PLT\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD1/TD101_Packaging_Code"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N101_Entity_Identifier_Code$",
       "script": "<trans>\n\"SF\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N101_Entity_Identifier_Code"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN101_Assigned_Identification$",
-      "script": "<trans>\n// Source node to initiate item loop - use itemList from IF\n$itemFromIF = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.item$internalId$;\n// Get PO Line Number from current item\n// Use $currentPallet already declared in pallet header\n$currentItem = $currentPallet[\"items\"][$itemIterator];\n$currentItem[\"poLineNumber\"]\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN101_Assigned_Identification"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL01_Hierarchical_Id_Number$",
-      "script": "<trans>\n// Initialize item iterator for current pallet\n$itemIterator = 0;\n$HLPIterator + 1\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL01_Hierarchical_Id_Number"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD5.TD504_Transportation_Method_Type_Code$",
@@ -254,6 +224,21 @@
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM.DTM03_Time$",
       "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 1, shippedDate) , \"HHMM\")\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM/DTM03_Time"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM01_Date_Time_Qualifier$",
+      "script": "<trans>\n\"017\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM01_Date_Time_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM02_Date$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 2, shippedDate) , \"yyyymmdd\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM02_Date"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.DTM?1.DTM03_Time$",
+      "script": "<trans>\nshippedDate = searchResponse$searchResult$recordList$record.ItemFulfillment$shippedDate$;\nif(isnull(shippedDate), shippedDate = now());\nformatdate( DateAdd(\"dd\", 2, shippedDate) , \"HHMM\")\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/DTM#1/DTM03_Time"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N103_Identification_Code_Qualifier$",
@@ -291,6 +276,26 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N4/N404_Country_Code"
     },
     {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N101_Entity_Identifier_Code$",
+      "script": "<trans>\n\"ST\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N101_Entity_Identifier_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N102_Name$",
+      "script": "<trans>\nBOL = searchResponse$searchResult$recordList$record.ItemFulfillment$shippingAddress$addressee$;\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship to name\"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N102_Name"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N103_Identification_Code_Qualifier$",
+      "script": "<trans>\nsearchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Ship_To_Code_Qualifier$value$\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N103_Identification_Code_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1?1.N104_Identification_Code$",
+      "script": "<trans>\nsearchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Ship_To_Code$value$\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1#1/N104_Identification_Code"
+    },
+    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.N1.N3.N301_Address_Information$",
       "script": "<trans>\nBOL = $locationToAddress1[$location];\nif(isnull(BOL), $isTest = true; BOL = \"Missing ship from address 1    \"; $jitterbitErrorMessage += BOL + \", \");\nBOL\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/N1/N3/N301_Address_Information"
@@ -316,21 +321,6 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN07_Product_Service_Id"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.REF01_Reference_Identification_Qualifier$",
-      "script": "<trans>\n\"CN\"\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF/REF01_Reference_Identification_Qualifier"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.",
-      "script": "<trans>\n$isSmallParcel\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF"
-    },
-    {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.REF02_Reference_Identification$",
-      "script": "<trans>\n// Use SSCC as tracking number for pallet\n$currentPalletSSCC\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF/REF02_Reference_Identification"
-    },
-    {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL.TD5.TD503_Identification_Code$",
       "script": "<trans>\nSCAC = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Standard_Carrier_Alpha_Code$value$;\nif(isnull(SCAC), $isTest = true; SCAC = \"Missing standard carrier alpha code (SCAC)\"; $jitterbitErrorMessage += SCAC + \", \");\n$isSmallParcel = false; //(SCAC == \"SMALLPARCELCODE\")\nSCAC\n\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL/TD5/TD503_Identification_Code"
@@ -351,39 +341,94 @@
       "targetPath": "SendDocumentsRequest/Documents/X12Document"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN02_Shipment_Identification$",
-      "script": "<trans>\n// Using pallet_array_object already declared in ISA01_Info_Qualifier\nWriteToOperationLog(\"Total Pallets from object: \" + $totalPallets);\n\nright(searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$, 9)\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN02_Shipment_Identification"
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL02_Hierarchical_Parent_Id_Number$",
+      "script": "<trans>\n\"1\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL02_Hierarchical_Parent_Id_Number"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA01_Info_Qualifier$",
-      "script": "<trans>\n$isTest = false;\n$jitterbitErrorMessage = \"\";\n//WriteToOperationLog(\"DONALD TRUMP WILL BE THE 47th PRESIDENT OF THE USA!!\");\n$IF_ID = searchResponse$searchResult$recordList$record.ItemFulfillment$internalId;\nifNumber = searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$;\nwritecache(ifNumber ,$IF_ID, 2592000, \"env\");\nWriteToOperationLog(\"IF NUMBER: \" + ifNumber);\nWriteToOperationLog(\"  \");\n\n// Parse Pallet JSON data\npallet_array_JSON = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Pallet_array_JSON$value$;\nWriteToOperationLog(\"Pallet JSON: \" + pallet_array_JSON);\n$pallet_array_object = JSONParser(pallet_array_JSON);\n$totalPallets = $pallet_array_object[\"totalPallets\"];\nWriteToOperationLog(\"Total Pallets: \" + $totalPallets);\n\n\n$itemDetailDict = dict();\n\n\"00\"\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA01_Info_Qualifier"
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.",
+      "script": "<trans>\n// Only run pallet-level node when palletIterator < totalPallets and no JSON errors\n$palletIterator < $totalPallets && Length($jitterbitErrorMessage) == 0\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL03_Hierarchical_Level_Code$",
-      "script": "<trans>\n// Initialize pallet iterator and get current pallet data\n// Reset item iterator for new pallet\n$itemIterator = 0;\nif($palletIterator < $totalPallets,\n    // Declare current pallet once here - reuse in all child nodes\n    $currentPallet = $pallet_array_object[\"pallets\"][$palletIterator];\n    $currentPalletSSCC = $currentPallet[\"sscc\"];\n    $currentPalletId = $currentPallet[\"palletId\"];\n    $currentPalletNumber = $currentPallet[\"palletNumber\"];\n    WriteToOperationLog(\"Processing Pallet \" + $currentPalletNumber + \" (ID: \" + $currentPalletId + \", SSCC: \" + $currentPalletSSCC + \")\");\n);\n\"O\"\n</trans>",
+      "script": "<trans>\n\n\"O\"\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL03_Hierarchical_Level_Code"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL01_Hierarchical_Id_Number$",
-      "script": "<trans>\n$PO_LineItemNUmber = 0;\n// Source node to initiate pallet loop - use packageList from IF\n$trackingNumFromIFItself = searchResponse$searchResult$recordList$record.ItemFulfillment$packageList$package.packageTrackingNumber$;\n\n// Get current pallet data from JSON (already declared in HL03, but ensure it's set)\nif($palletIterator < $totalPallets,\n    $currentPallet = $pallet_array_object[\"pallets\"][$palletIterator];\n    $currentPalletSSCC = $currentPallet[\"sscc\"];\n    $currentPalletId = $currentPallet[\"palletId\"];\n    $currentPalletNumber = $currentPallet[\"palletNumber\"];\n);\n\n$HLPIterator = ($palletIterator * 2) + 1;\n$HLPIterator\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL01_Hierarchical_Id_Number"
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.REF.",
+      "script": "<trans>\n$isSmallParcel\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/REF"
     },
     {
-      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.",
-      "script": "<trans>\n// Only run item-level node when itemIterator < number of items in current pallet\n// Use $currentPallet already declared in pallet header\n$palletItems = $currentPallet[\"items\"];\n$itemIterator < Length($palletItems)\n</trans>",
-      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL"
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN01_Marks_And_Numbers_Qualifier$",
+      "script": "<trans>\n\"GM\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN01_Marks_And_Numbers_Qualifier"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL02_Hierarchical_Parent_Id_Number$",
+      "script": "<trans>\n// Item parent is the current pallet's HL number\n$currentPalletHL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL02_Hierarchical_Parent_Id_Number"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN01_Assigned_Identification$",
-      "script": "<trans>\n// Get PO Line Number from current item in current pallet\n// Use $currentPallet already declared in pallet header\n$currentItem = $currentPallet[\"items\"][$itemIterator];\n$PO_LineItemNUmber = $currentItem[\"poLineNumber\"];\n$PO_LineItemNUmber\n</trans>",
+      "script": "<trans>\n// Get PO Line Number from current item in current pallet declared in HL item loop\n$PO_LineItemNUmber = $currentItem[\"poLineNumber\"];\n$PO_LineItemNUmber\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN01_Assigned_Identification"
     },
     {
       "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.LIN.LIN03_Product_Service_Id$",
-      "script": "<trans>\n// Get VPN from current item in current pallet\n// Use $currentPallet already declared in pallet header\n$currentItem = $currentPallet[\"items\"][$itemIterator];\n$VPN = $currentItem[\"vpn\"];\nif(isnull($VPN), $lineDataIsPresent = false);\n$VPN\n</trans>",
+      "script": "<trans>\n// Get VPN from current item in current pallet\n$VPN = $currentItem[\"vpn\"];\nif(isnull($VPN), $lineDataIsPresent = false);\n$VPN\n</trans>",
       "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/LIN/LIN03_Product_Service_Id"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN101_Assigned_Identification$",
+      "script": "<trans>\n$PO_LineItemNUmber\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN101_Assigned_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN102_Number_Of_Units_Shipped$",
+      "script": "<trans>\n$currentItem[\"qty\"]\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN102_Number_Of_Units_Shipped"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.SN1.SN103_Unit_Or_Basis_For_Measurement_Code$",
+      "script": "<trans>\n$currentItem[\"ediUom\"]\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/SN1/SN103_Unit_Or_Basis_For_Measurement_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n//Get it to loop on item:\nitem = searchResponse$searchResult$recordList$record.ItemFulfillment$itemList$item.item$internalId;\n$currentItem = $currentPallet[\"items\"][$itemIterator++];\n// Increment HL counter for each item (items increment sequentially: 4, 5, 6, etc.)\n$hlCounter++;\n$hlCounter\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.BSN.BSN02_Shipment_Identification$",
+      "script": "<trans>\nright(searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$, 9) +\"Pallets\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/BSN/BSN02_Shipment_Identification"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.MAN.MAN02_Marks_And_Numbers$",
+      "script": "<trans>\n$currentPallet[\"sscc\"]\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/MAN/MAN02_Marks_And_Numbers"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL01_Hierarchical_Id_Number$",
+      "script": "<trans>\n// Source node to initiate pallet loop - use packageList from IF\n$trackingNumFromIFItself = searchResponse$searchResult$recordList$record.ItemFulfillment$packageList$package.packageTrackingNumber$;\n\n// Reset item iterator for new pallet\n$itemIterator = 0;\n\n// Declare current pallet once here - reuse in all child nodes\n$currentPallet = $pallet_array_object[\"pallets\"][$palletIterator];\n$total_items_in_pallet = Length($currentPallet[\"items\"]);\n\n// Increment HL counter for pallet (starts at 3, then continues as items increment it)\n$hlCounter++;\n$currentPalletHL = $hlCounter;\n$currentPalletHL\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL01_Hierarchical_Id_Number"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL.",
+      "script": "<trans>\n// Only run item-level node when itemIterator < number of items in current pallet:\n$itemIterator < $total_items_in_pallet\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$GS.ST.HL?1.HL.HL03_Hierarchical_Level_Code$",
+      "script": "<trans>\n\"T\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/GS/ST/HL#1/HL/HL03_Hierarchical_Level_Code"
+    },
+    {
+      "targetNode": "SendDocumentsRequest$Documents$X12Document.ISA$ISA01_Info_Qualifier$",
+      "script": "<trans>\n$isTest = false;\n$jitterbitErrorMessage = \"\";\n//WriteToOperationLog(\"DONALD TRUMP WILL BE THE 47th PRESIDENT OF THE USA!!\");\n$IF_ID = searchResponse$searchResult$recordList$record.ItemFulfillment$internalId;\nifNumber = searchResponse$searchResult$recordList$record.ItemFulfillment$tranId$;\nwritecache(ifNumber ,$IF_ID, 2592000, \"env\");\nWriteToOperationLog(\"IF NUMBER: \" + ifNumber);\nWriteToOperationLog(\"  \");\n\n$palletJSONString = searchResponse$searchResult$recordList$record.ItemFulfillment$customFieldList$Pallet_array_JSON$value$;\n\n//validate JSON\nvalidationResult = RunScript(\"<TAG>script:Validate_pallet_JSON</TAG>\");\nWriteToOperationLog(\"VALIDATION RESULT: \" + validationResult);\n\n// Parse the JSON result\nvalidationObj = JSONParser(validationResult);\nsuccess = validationObj[\"success\"];\nerrorMessage = validationObj[\"errorMessage\"];\nstatus = validationObj[\"status\"];\n\nCase(\n    success == true,\n        // JSON is valid - parse it and set up variables\n        $pallet_array_object = JSONParser($palletJSONString);\n        $totalPallets = $pallet_array_object[\"totalPallets\"];\n        WriteToOperationLog(\"JSON validation passed. Total Pallets: \" + $totalPallets);\n    ,\n    status == \"INVALID_JSON\",\n        $isTest = true;\n        $jitterbitErrorMessage += \"Pallet_array_JSON is malformed or invalid JSON, \";\n        WriteToOperationLog(\"INVALID JSON: \" + errorMessage);\n    ,\n    status == \"MISSING_DATA\",\n        $isTest = true;\n        $jitterbitErrorMessage += \"Pallet_array_JSON missing required data: \" + errorMessage + \", \";\n        WriteToOperationLog(\"MISSING DATA: \" + errorMessage);\n    ,\n    true,\n        // Default case - script failed or unknown status\n        $isTest = true;\n        $jitterbitErrorMessage += \"Pallet JSON validation script failed, \";\n        WriteToOperationLog(\"VALIDATION FAILED: \" + errorMessage);\n);\n\nWriteToOperationLog(\"Jitterbit error message: \" + $jitterbitErrorMessage);\n// Initialize HL counter: Shipment=1, Order=2, so start pallets at 3\n$hlCounter = 2;\n$palletIterator = 0;\n\n\"00\"\n</trans>",
+      "targetPath": "SendDocumentsRequest/Documents/X12Document/ISA/ISA01_Info_Qualifier"
     }
   ]
 }
